@@ -58,17 +58,20 @@ export function Header() {
     { href: '/contact', label: 'Contacto', icon: Mail },
   ];
 
+  // Header.tsx updates
+  const isScrolledStyle = scrolled || pathname === '/contact';
+
   return (
     <header
       className={cn(
         'fixed top-0 left-0 w-full z-50 transition-all duration-300',
-        scrolled
+        isScrolledStyle
           ? 'bg-bone/90 backdrop-blur-md shadow-md py-2 border-b border-green-dark/10'
           : 'bg-transparent py-4',
       )}
     >
       <div className="container mx-auto px-5 flex items-center justify-between">
-        <Logo variant={scrolled ? 'dark' : 'light'} />
+        <Logo variant={isScrolledStyle ? 'dark' : 'light'} />
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
@@ -78,7 +81,7 @@ export function Header() {
               href={link.href}
               className={cn(
                 'group flex items-center gap-2 text-sm font-medium tracking-wide transition-colors relative pb-1',
-                scrolled
+                isScrolledStyle
                   ? 'text-green-dark hover:text-stone'
                   : 'text-bone hover:text-white',
               )}
@@ -88,7 +91,7 @@ export function Header() {
               <span
                 className={cn(
                   'absolute bottom-0 left-0 w-full h-[2px] transform scale-x-0 transition-transform origin-left group-hover:scale-x-100',
-                  scrolled ? 'bg-green-dark' : 'bg-white',
+                  isScrolledStyle ? 'bg-green-dark' : 'bg-white',
                 )}
               />
             </Link>
@@ -100,7 +103,7 @@ export function Header() {
           onClick={() => setIsOpen(true)}
           className={cn(
             'lg:hidden p-2 rounded-full transition-colors',
-            scrolled
+            isScrolledStyle
               ? 'text-green-dark hover:bg-green-dark/5'
               : 'text-bone hover:bg-white/10',
           )}
