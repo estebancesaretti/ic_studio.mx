@@ -173,7 +173,7 @@ export function Header() {
                 <p className="text-stone text-sm text-center mb-4">Síguenos</p>
                 <div className="flex justify-center gap-6 text-green-dark">
                   <a
-                    href="#"
+                    href="https://www.instagram.com/ic_studiomx/"
                     aria-label="Instagram"
                     className="p-3 bg-white rounded-full shadow-sm hover:scale-110 transition-transform"
                   >

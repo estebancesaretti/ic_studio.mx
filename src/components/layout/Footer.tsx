@@ -91,7 +91,7 @@ export function Footer() {
             <h4 className="text-white font-serif text-lg mb-4">Social</h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/ic_studiomx/"
                 aria-label="Instagram"
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-wood-light hover:border-wood-light hover:text-green-dark transition-all duration-300"
               >
