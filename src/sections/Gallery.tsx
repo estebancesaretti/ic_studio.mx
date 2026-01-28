@@ -89,7 +89,7 @@ export function Gallery() {
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <ZoomIn className="text-white w-10 h-10 opacity-80" />
               </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-green-dark/90 backdrop-blur px-4 py-2 rounded-lg translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-4 left-4 right-4 bg-green-dark/90 backdrop-blur px-4 py-2 rounded-lg transition-transform duration-300 translate-y-0 md:translate-y-full md:group-hover:translate-y-0">
                 <span className="text-sm font-medium tracking-wide">
                   {img.caption}
                 </span>
