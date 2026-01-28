@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Ideally this image is loaded with better resolution strategy, but keeping style for now */
+  /* We will use a picture tag or simple img in HTML and position:absolute instead of background-image for LCP performance */
+  background-color: #1a221f; 
+  color: var(--bone);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(12, 19, 15, 0.75),
+    rgba(47, 62, 52, 0.6)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 6rem 0 5rem;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  color: rgba(244, 241, 234, 0.85);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 8rem;
+  }
+}
